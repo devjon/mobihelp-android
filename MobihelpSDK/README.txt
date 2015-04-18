@@ -4,6 +4,27 @@ Documentation   : http://developer.freshdesk.com/mobihelp
 Support         : http://support.freshdesk.com
 Email           : support@freshdesk.com
 
+V1.3.1
+---------------------
+Added support for Toolbar based Material themes (*.NoActionBar themes)
+Added support for Enhanced Privacy Mode
+Ability to deep link and open solutions in-app
+Minor Fixes
+
+V1.3
+---------------------
+Added support for multiple categories in solutions
+
+V1.2.1 
+---------------------
+Fix Empty Attachment Issue.
+
+V1.2
+---------------------
+Added Auto Reply for new Conversations
+Image Attachments can be added to conversations
+Configuration can be done from SDK
+Minor Fixes
 
 V1.1.2
 ---------------------

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.freshdesk.mobihelp"
     android:versionCode="1"
@@ -57,7 +58,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.freshdesk.mobihelp.activity.SolutionArticleListActivity" />
         </activity>
+        <activity
+            android:name="com.freshdesk.mobihelp.activity.AttachmentHandlerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName="com.freshdesk.mobihelp.activity.SolutionArticleListActivity"
+            android:theme="@style/Theme.Mobihelp" >
 
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.freshdesk.mobihelp.activity.SolutionArticleListActivity" />
+        </activity>
+        
         <service android:name="com.freshdesk.mobihelp.service.MobihelpService" />
 
         <receiver android:name="com.freshdesk.mobihelp.receiver.ConnectivityReceiver" >

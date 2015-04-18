@@ -1,4 +1,4 @@
-package com.example.mobihelp.demo1;
+package com.example.mobihelp.materialthemedemo1;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -12,26 +12,39 @@ import com.freshdesk.mobihelp.MobihelpCallbackStatus;
 import com.freshdesk.mobihelp.MobihelpConfig;
 import com.freshdesk.mobihelp.UnreadUpdatesCallback;
 
+/**
+ * Material Theme Demo - Steps to use toolbar with material theme
+ * 
+ * 1. Android Target version 5.0 or later 
+ * 2. Support library - appcompat-v7 revision 21 or later 
+ * 3. Uncomment Toolbar widget and delete the dummy view from the xml file in MobihelpSDK/res/layout/mobihelp_toolbar.xml
+ * 4. Theme set to *.NoActionBar variant of AppCompat theme
+ * 
+ * Custom Font Support
+ * 1. Ensure Calligraphy library is included as a dependency
+ * 2. Include the ttf font in assets
+ * 3. Set the font using calligrahy (Eg. Refer Application class -> DemoApp.java) 
+ * 
+ * Calligraphy Github Repo : https://github.com/chrisjenx/Calligraphy
+ * 
+ */
 public class MainActivity extends ActionBarActivity {
 
-	Button btnSupport;
-	
+	Button btnSupport;	
 	public void onCreate(Bundle savedInstance) {
 		super.onCreate(savedInstance);
 		
 		setContentView(R.layout.activity_main);
-		
-		MobihelpConfig config = new MobihelpConfig("https://yourfreshdeskdomain.freshdesk.com",
-				"your-app-id-here", "your-app-secret-here");
+
+		MobihelpConfig config = new MobihelpConfig("https://yourfreshdeskdomain.freshdesk.com", "your-app-id-here", "your-app-secret-here");
 		config.setFeedbackType(FeedbackType.NAME_AND_EMAIL_REQUIRED);
-		config.setAutoReplyEnabled(true);
 		Mobihelp.init(this, config);
 
 		// Add Custom data pertaining to your application 
 		Mobihelp.addCustomData("User Type", "Paid");
 		Mobihelp.addCustomData("Level Completed", "14");
 		Mobihelp.addCustomData("Achievements Unlocked", "Explorer");
-
+		
 		// Drop BreadCrumbs to track user activity
 		Mobihelp.leaveBreadCrumb(this.getLocalClassName());
 		
