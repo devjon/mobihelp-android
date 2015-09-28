@@ -8,6 +8,7 @@
         <item name="actionBarWidgetTheme">@style/MyThemeWidget</item>
     </style>
 
+
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
         <item name="android:background">@color/actionbar_bg</item>
         <item name="background">@color/actionbar_bg</item>
@@ -30,5 +31,6 @@
         <item name="searchViewStyle">@style/mySearchBar</item>
         <!-- your other custom widget styles -->
     </style>
+
 
 </resources>
